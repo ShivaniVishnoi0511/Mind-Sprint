@@ -28,8 +28,8 @@
 
 ## 📸 Screenshots
 
-| Login Page | Quiz Interface | High Scores |
-|------------|----------------|-------------|
+| Login Page | Submit Interface | Quiz Interface| High Scores |
+|------------|------------------|---------------|-------------|
 | ![Login](https://github.com/ShivaniVishnoi0511/Mind-Sprint/blob/main/Mind%20Sprint/screens/login.png) | ![Submit](https://github.com/ShivaniVishnoi0511/Mind-Sprint/blob/main/Mind%20Sprint/screens/submit.png) | ![Quiz](https://github.com/ShivaniVishnoi0511/Mind-Sprint/blob/main/Mind%20Sprint/screens/quiz.png) | ![High Scores](https://github.com/ShivaniVishnoi0511/Mind-Sprint/blob/main/Mind%20Sprint/screens/Score.png) |
 
 ---
