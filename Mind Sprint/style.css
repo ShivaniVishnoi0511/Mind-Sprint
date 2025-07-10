@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background: url('question image.avif') no-repeat center center/cover;
+  height: 100vh;
+}
+.login, .login1 {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #1c1c1c, #2a2a2a);
+  height: 30rem;
+  width: 25rem;
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.5),
+    0 -5px 10px rgba(255, 255, 255, 0.1),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform: perspective(800px) rotateX(5deg);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.login:hover, .login1:hover {
+  transform: perspective(800px) rotateX(0deg) scale(1.02);
+  box-shadow:
+    0 15px 25px rgba(0, 0, 0, 0.6),
+    0 -5px 10px rgba(255, 255, 255, 0.1),
+    inset 0 1px 3px rgba(255, 255, 255, 0.2);
+}
+
+.login1 input, .button {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+.login1 input:focus, .button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(161, 70, 176, 0.8);
+}
+
+
+
+.full {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 4rem;
+}
+
+.full h1 {
+  font-size: 7rem;
+  font-weight: 700;
+  font-family: 'Lilita One', sans-serif;
+  text-shadow: 4px 4px 4px #a146b0;
+  letter-spacing: 0.1rem;
+  color: #2f2a2aeb;
+  position: relative;
+  z-index: 1;
+  margin-top: 3rem;
+}
+
+.login, .login1 {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  opacity: 0.9;
+  border-radius: 3rem;
+  border: 3px solid #a146b0;
+  box-shadow: 3px 3px 3px #a146b0;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.login {
+  height: 30rem;
+  width: 25rem;
+}
+
+.login1 {
+  height: 25rem;
+  width: 25rem;
+}
+
+.login h3, .login1 h3 {
+  font-size: 4rem;
+  color: #a146b0;
+  font-family: 'Courgette', cursive;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.button {
+  height: 3rem;
+  width: 12rem;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  background-color: #a146b0;
+  border: none;
+  cursor: pointer;
+}
+
+.login1 input {
+  height: 3rem;
+  width: 18rem;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 3rem;
+  border: none;
+}
+
+.login1 input:hover {
+  transform: scaleX(1.2);
+  transition: transform 0.2s;
+  border: 4px solid #a146b0;
+  box-shadow: 4px 4px 4px #a146b0;
+}
+
+#List li {
+  font-size: 2rem;
+  color: white;
+  font-family: 'Courgette', cursive;
+  list-style: none;
+  padding: 1rem;
+}
+
+/* RESPONSIVE STYLES */
+
+@media (max-width: 540px) {
+  .full h1 {
+    font-size: 4rem;
+  }
+
+  .login, .login1 {
+    width: 17rem;
+  }
+
+  .login h3, .login1 h3 {
+    font-size: 3rem;
+  }
+
+  .login1 input {
+    width: 12rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .full h1 {
+    font-size: 2.5rem;
+  }
+
+  .login, .login1 {
+    width: 12rem;
+  }
+
+  .button {
+    width: 8rem;
+  }
+
+  .login h3, .login1 h3 {
+    font-size: 1.2rem;
+  }
+}

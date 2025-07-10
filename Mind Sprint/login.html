@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind Sprint</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="full">
+    <h1>Mind Sprint</h1>
+    <div class="login1">
+      <h3>Login</h3>
+      <input type="text" placeholder="Enter your name" id="user" />
+      <button class="button" id="login">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    const name = document.getElementById("user");
+    const login = document.getElementById("login");
+
+    function Login() {
+      const username = name.value;
+      if (username.trim() !== "") {
+        localStorage.setItem("username", username);
+        window.location.href = "quiz.html";
+      } else {
+        alert("Please enter your name");
+      }
+    }
+
+    name.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        Login();
+      }
+    });
+
+    login.addEventListener("click", Login);
+  </script>
+</body>
+</html>

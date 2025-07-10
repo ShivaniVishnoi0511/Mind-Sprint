@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind Sprint</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="full">
+    <div class="login" style="gap: 1rem;">
+      <h3>High Scores</h3>
+      <ul id="List"></ul>
+      <button class="button" id="home">Home</button>
+    </div>
+  </div>
+
+  <script>
+    const List = document.getElementById("List");
+    const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+    if (highScores.length === 0) {
+      List.innerHTML = "<li>No high scores available.</li>";
+    } else {
+      highScores.forEach(player => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${player.name}: ${player.score}`;
+        List.appendChild(listItem);
+      });
+    }
+
+    document.getElementById("home").onclick = () => {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
